@@ -97,3 +97,12 @@ golang:
   build: ./golang
   ports:
     - "3001:8080"
+
+django:
+  build:
+    context: ./django
+    dockerfile: Dockerfile
+  volumes:
+    - ./django:/app
+  ports:
+    - "8000:8000"

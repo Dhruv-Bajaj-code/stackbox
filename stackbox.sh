@@ -42,7 +42,7 @@ PS3='Select your backend: '
 
 echo "BACKEND OPTIONS:"
 
-backend_options=("Flask" "Rails" "Golang")
+backend_options=("Flask" "Rails" "Golang" "Django")
 select opt in "${backend_options[@]}"
 do
     case $opt in
@@ -59,6 +59,11 @@ do
         "Golang")
             echo "You've chosen Golang"
             stack+=("golang")
+            break;
+            ;;
+        "Django")
+            echo "You've chosen Django"
+            stack+=("django")
             break;
             ;;
         *) echo "Invalid option $REPLY";;
